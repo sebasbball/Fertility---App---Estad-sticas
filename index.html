@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Ciclo - Estadísticas</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="estadisticas.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <!-- Font Awesome para los iconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="icon" href="fertility-app/Images/heart-favicon.svg" type="image/svg+xml">
+</head>
+<body>
+
+  <!-- ============================================ -->
+  <!-- HEADER: Logo, título y navegación por tabs -->
+  <!-- ============================================ -->
+  <header class="header">
+    <div class="logo">
+      <div class="icono"><i class="fa-solid fa-heart" style="color: #e60076;"></i></div>
+      <h1>Mi Ciclo</h1>
+      <p>Seguimiento de fertilidad y ciclo menstrual</p>
+    </div>
+
+    <!-- Checkbox oculto para controlar el menú (solo CSS) -->
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+
+    <!-- Botón hamburguesa (solo visible en móvil) -->
+    <label for="menu-toggle" class="hamburger">
+      <i class="fa-solid fa-bars"></i>
+    </label>
+
+    <!-- Navegación con tabs -->
+    <nav class="tabs">
+      <button>Calendario</button>
+      <button class="active">Estadísticas</button>
+      <button>Registro Diario</button>
+      <button>Hábitos</button>
+    </nav>
+  </header>
+
+  <!-- ============================================ -->
+  <!-- CONTENEDOR PRINCIPAL: Estadísticas -->
+  <!-- ============================================ -->
+  <main class="estadisticas-container">
+    
+    <!-- ============================================ -->
+    <!-- CARD IZQUIERDA: Próximo Período -->
+    <!-- ============================================ -->
+    <section class="proximo-periodo-card">
+      <div class="card-header">
+        <i class="fa-solid fa-calendar"></i>
+        <h2>Próximo Período</h2>
+      </div>
+      <p class="card-subtitle">Predicción basada en tu ciclo</p>
+
+      <div class="fecha-destacada">lunes, 17 de noviembre de 2025</div>
+      <p class="dias-restantes">En 12 días</p>
+
+      <!-- Barra de progreso del ciclo -->
+      <div class="progreso-ciclo">
+        <div class="progreso-ciclo-label">
+          <span>Progreso del ciclo</span>
+          <span class="porcentaje">57%</span>
+        </div>
+        <div class="barra-progreso">
+          <div class="barra-progreso-fill"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- CARD DERECHA: Estadísticas del Ciclo -->
+    <!-- ============================================ -->
+    <aside class="estadisticas-ciclo-card">
+      <div class="card-header">
+        <i class="fa-solid fa-chart-line"></i>
+        <h2>Estadísticas del Ciclo</h2>
+      </div>
+      <p class="card-subtitle">Promedios basados en tu historial</p>
+
+      <!-- Lista de estadísticas -->
+      <div class="estadisticas-lista">
+        <div class="estadistica-item">
+          <span class="estadistica-label">Duración del ciclo</span>
+          <span class="estadistica-valor morado">28 días</span>
+        </div>
+
+        <div class="estadistica-item">
+          <span class="estadistica-label">Duración del período</span>
+          <span class="estadistica-valor rosa">5 días</span>
+        </div>
+
+        <div class="estadistica-item">
+          <span class="estadistica-label">Días registrados</span>
+          <span class="estadistica-valor negro">5 días</span>
+        </div>
+      </div>
+    </aside>
+
+  </main>
+
+</body>
+</html>

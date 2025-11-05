@@ -1,0 +1,241 @@
+/* ============================================ */
+/* ESTILOS ESPECÍFICOS PARA LA PÁGINA DE ESTADÍSTICAS */
+/* ============================================ */
+
+/* Contenedor principal de estadísticas */
+.estadisticas-container {
+  display: flex;
+  gap: 20px;
+  width: 90%;
+  max-width: 1100px;
+  margin-top: 40px;
+}
+
+/* ============================================ */
+/* CARD DE PRÓXIMO PERÍODO */
+/* ============================================ */
+
+.proximo-periodo-card {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  padding: 25px;
+  flex: 1;
+}
+
+.proximo-periodo-card .card-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.proximo-periodo-card .card-header i {
+  font-size: 1.3rem;
+  color: #e60076;
+}
+
+.proximo-periodo-card .card-header h2 {
+  font-size: 1.1rem;
+  color: #0a0a0a;
+  font-weight: 500;
+  margin: 0;
+}
+
+.proximo-periodo-card .card-subtitle {
+  color: #717182;
+  font-size: 0.9rem;
+  margin-bottom: 25px;
+}
+
+/* Fecha destacada */
+.fecha-destacada {
+  color: #e91e63;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.dias-restantes {
+  color: #717182;
+  font-size: 0.9rem;
+  margin-bottom: 25px;
+}
+
+/* ============================================ */
+/* BARRA DE PROGRESO DEL CICLO */
+/* ============================================ */
+
+.progreso-ciclo {
+  margin-top: 25px;
+}
+
+.progreso-ciclo-label {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+  color: #0a0a0a;
+  font-weight: 500;
+}
+
+.progreso-ciclo-label .porcentaje {
+  color: #717182;
+}
+
+.barra-progreso {
+  width: 100%;
+  height: 12px;
+  background: #f0f0f0;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.barra-progreso-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #0b0524, #4a3b5c);
+  border-radius: 10px;
+  width: 57%;
+  transition: width 0.3s ease;
+}
+
+/* ============================================ */
+/* CARD DE ESTADÍSTICAS DEL CICLO */
+/* ============================================ */
+
+.estadisticas-ciclo-card {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  padding: 25px;
+  flex: 1;
+}
+
+.estadisticas-ciclo-card .card-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.estadisticas-ciclo-card .card-header i {
+  font-size: 1.3rem;
+  color: #8200db;
+}
+
+.estadisticas-ciclo-card .card-header h2 {
+  font-size: 1.1rem;
+  color: #0a0a0a;
+  font-weight: 500;
+  margin: 0;
+}
+
+.estadisticas-ciclo-card .card-subtitle {
+  color: #717182;
+  font-size: 0.9rem;
+  margin-bottom: 25px;
+}
+
+/* ============================================ */
+/* LISTA DE ESTADÍSTICAS */
+/* ============================================ */
+
+.estadisticas-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.estadistica-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.estadistica-label {
+  color: #0a0a0a;
+  font-size: 0.95rem;
+  font-weight: 400;
+}
+
+.estadistica-valor {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.estadistica-valor.morado {
+  color: #8200db;
+}
+
+.estadistica-valor.rosa {
+  color: #e91e63;
+}
+
+.estadistica-valor.negro {
+  color: #0a0a0a;
+}
+
+/* ============================================ */
+/* RESPONSIVE: Adaptación para tablets */
+/* ============================================ */
+
+@media (max-width: 900px) {
+  .estadisticas-container {
+    flex-direction: column;
+  }
+}
+
+/* ============================================ */
+/* RESPONSIVE: Adaptación para móviles */
+/* ============================================ */
+
+@media (max-width: 600px) {
+  .estadisticas-container {
+    width: 100%;
+    margin-top: 20px;
+    gap: 15px;
+  }
+
+  .proximo-periodo-card,
+  .estadisticas-ciclo-card {
+    padding: 15px;
+  }
+
+  .proximo-periodo-card .card-header h2,
+  .estadisticas-ciclo-card .card-header h2 {
+    font-size: 1rem;
+  }
+
+  .fecha-destacada {
+    font-size: 1.1rem;
+  }
+
+  .estadistica-label {
+    font-size: 0.9rem;
+  }
+
+  .estadistica-valor {
+    font-size: 1rem;
+  }
+}
+
+/* Para pantallas MUY pequeñas (menos de 360px) */
+@media (max-width: 360px) {
+  .proximo-periodo-card,
+  .estadisticas-ciclo-card {
+    padding: 12px;
+  }
+
+  .fecha-destacada {
+    font-size: 1rem;
+  }
+
+  .estadistica-label {
+    font-size: 0.85rem;
+  }
+
+  .estadistica-valor {
+    font-size: 0.95rem;
+  }
+}
