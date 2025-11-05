@@ -1,8 +1,99 @@
 /* ============================================ */
-/* ESTILOS ESPECÍFICOS PARA LA PÁGINA DE ESTADÍSTICAS */
+/* RESET Y CONFIGURACIÓN GLOBAL */
 /* ============================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
 
-/* Contenedor principal de estadísticas */
+body {
+  background: linear-gradient(135deg, #f8f1f8, #eef0fb);
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+/* ============================================ */
+/* HEADER: Logo, título y subtítulo */
+/* ============================================ */
+.header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.header .icono {
+  font-size: 2.5rem;
+}
+
+.header h1 {
+  color: #f6339a;
+  font-weight: 600;
+  padding-bottom: 1rem;
+}
+
+.header p {
+  color: #4a5565;
+  font-size: 0.9rem;
+  padding-bottom: 1rem;
+}
+
+/* ============================================ */
+/* NAVEGACIÓN: Tabs superiores */
+/* ============================================ */
+.menu-toggle {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+  background: #e60076;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+.hamburger:hover {
+  background: #c70066;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+  background: #ececf0;
+  border-radius: 40px;
+  padding: 6px;
+  box-shadow: inset 0 1px 4px rgba(0,0,0,0.1);
+}
+
+.tabs button {
+  background: none;
+  border: none;
+  padding: 8px 55px;
+  border-radius: 40px;
+  font-weight: 500;
+  cursor: pointer;
+  color: #0a0a0a;
+  transition: 0.3s;
+}
+
+.tabs button.active {
+  background: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* ============================================ */
+/* CONTENEDOR PRINCIPAL: Estadísticas */
+/* ============================================ */
 .estadisticas-container {
   display: flex;
   gap: 20px;
@@ -14,7 +105,6 @@
 /* ============================================ */
 /* CARD DE PRÓXIMO PERÍODO */
 /* ============================================ */
-
 .proximo-periodo-card {
   background: white;
   border-radius: 15px;
@@ -27,12 +117,12 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 8px;
 }
 
 .proximo-periodo-card .card-header i {
   font-size: 1.3rem;
-  color: #e60076;
+  color: #f6339a;
 }
 
 .proximo-periodo-card .card-header h2 {
@@ -48,9 +138,8 @@
   margin-bottom: 25px;
 }
 
-/* Fecha destacada */
 .fecha-destacada {
-  color: #e91e63;
+  color: #f6339a;
   font-size: 1.3rem;
   font-weight: 600;
   margin-bottom: 8px;
@@ -65,7 +154,6 @@
 /* ============================================ */
 /* BARRA DE PROGRESO DEL CICLO */
 /* ============================================ */
-
 .progreso-ciclo {
   margin-top: 25px;
 }
@@ -94,7 +182,7 @@
 
 .barra-progreso-fill {
   height: 100%;
-  background: linear-gradient(90deg, #0b0524, #4a3b5c);
+  background: linear-gradient(90deg, #2c0732, #fea9fa);
   border-radius: 10px;
   width: 57%;
   transition: width 0.3s ease;
@@ -103,7 +191,6 @@
 /* ============================================ */
 /* CARD DE ESTADÍSTICAS DEL CICLO */
 /* ============================================ */
-
 .estadisticas-ciclo-card {
   background: white;
   border-radius: 15px;
@@ -116,12 +203,12 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 8px;
 }
 
 .estadisticas-ciclo-card .card-header i {
   font-size: 1.3rem;
-  color: #8200db;
+  color: #9810fa;
 }
 
 .estadisticas-ciclo-card .card-header h2 {
@@ -140,11 +227,14 @@
 /* ============================================ */
 /* LISTA DE ESTADÍSTICAS */
 /* ============================================ */
-
 .estadisticas-lista {
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+
+.estadisticas-ciclo-card .card-header i {
+   color: #f6339a;
 }
 
 .estadistica-item {
@@ -156,7 +246,7 @@
 .estadistica-label {
   color: #0a0a0a;
   font-size: 0.95rem;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .estadistica-valor {
@@ -165,32 +255,121 @@
 }
 
 .estadistica-valor.morado {
-  color: #8200db;
+   font-weight: 200;
+   font-size: 16px;
+  color: #9810fa;
 }
 
 .estadistica-valor.rosa {
-  color: #e91e63;
+  color: #f6339a;
+  font-weight: 200;
+   font-size: 16px;
 }
 
 .estadistica-valor.negro {
   color: #0a0a0a;
+  font-weight: 200;
+   font-size: 16px;
 }
 
 /* ============================================ */
 /* RESPONSIVE: Adaptación para tablets */
 /* ============================================ */
-
 @media (max-width: 900px) {
   .estadisticas-container {
     flex-direction: column;
+  }
+  
+  .tabs button {
+    padding: 8px 20px;
+    font-size: 0.85rem;
   }
 }
 
 /* ============================================ */
 /* RESPONSIVE: Adaptación para móviles */
 /* ============================================ */
-
 @media (max-width: 600px) {
+  body {
+    padding: 20px 10px;
+  }
+
+  .header {
+    margin-bottom: 20px;
+    position: relative;
+  }
+
+  .header .logo {
+    position: relative;
+    padding-top: 10px;
+  }
+
+  .header .icono {
+    font-size: 2rem;
+  }
+
+  .header h1 {
+    font-size: 1.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .header p {
+    font-size: 0.8rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .hamburger {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: -2rem;
+    margin-top: 0;
+    background: linear-gradient(135deg, #f8f1f8, #eef0fb);
+    color: #0b0524;
+  }
+
+  .hamburger:hover {
+    background: linear-gradient(135deg, #f8f1f8, #eef0fb);
+  }
+
+  .tabs {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 10px;
+    transform: none;
+    width: 250px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    padding: 10px;
+    z-index: 1000;
+    margin-top: 10px;
+  }
+
+  .menu-toggle:checked ~ .tabs {
+    display: flex;
+  }
+
+  .menu-toggle:checked ~ .hamburger i::before {
+    content: "\f00d";
+  }
+
+  .tabs button {
+    padding: 12px 20px;
+    font-size: 0.9rem;
+    text-align: left;
+    border-radius: 8px;
+    margin-bottom: 5px;
+    width: 100%;
+  }
+
+  .tabs button.active {
+    background: #ffe8fa;
+    color: #0a0a0a;
+  }
+
   .estadisticas-container {
     width: 100%;
     margin-top: 20px;
@@ -222,6 +401,10 @@
 
 /* Para pantallas MUY pequeñas (menos de 360px) */
 @media (max-width: 360px) {
+  body {
+    padding: 15px 8px;
+  }
+
   .proximo-periodo-card,
   .estadisticas-ciclo-card {
     padding: 12px;
